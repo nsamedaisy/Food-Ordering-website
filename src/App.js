@@ -19,7 +19,7 @@ function App() {
       </Routes>
 
       <CartProvider>
-        <Cart />
+        {/* <Cart /> */}
       </CartProvider>
     </div>
   );
