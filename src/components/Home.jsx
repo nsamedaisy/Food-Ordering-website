@@ -1,14 +1,11 @@
 import React from 'react';
 import Navbar from './Navbar';
-import data from './data'
-import MenuCard from './MenuCard';
 
 function Home() {
   return (
     <div>
       <div className='home-container'>
         <div className='home-banner-container' >
-          <div className='home-bannerImage-container'></div>
           <div className="home-text-section">
             <h1 className="primary-heading">
               Your Favourite Food Delivered Hot & Fresh
@@ -22,12 +19,12 @@ function Home() {
               Order Now
             </button>
           </div>
-          <div className="home-image-section">
-            {/* <img src={} alt="" /> */}
-          </div>
+          {/* <div className="home-image-section">
+            <img src={} alt="" />
+        </div> */}
         </div>
       </div>
-      <div className='card-wrap'>
+      {/* <div className='card-wrap'>
         {data.productData.map((item, index) => {
           return (
             <div>
@@ -35,15 +32,15 @@ function Home() {
                 title={item.title}
                 desc={item.desc}
                 price={item.price}
-                item={item}
                 img={item.img}
+                id={item.id}
                 key={index}
               />
             </div>
           )
         })}
-      </div>
-    </div>
+      </div> */}
+    </div >
 
   )
 }

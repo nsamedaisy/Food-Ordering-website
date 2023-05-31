@@ -123,9 +123,8 @@ nav {
   position: relative;
   display: flex;
   padding: 4rem 2rem;
-  width: 50vw;
-  margin: auto;
-  /* padding-top: 4rem; */
+  width: 55vw;
+  /* margin: auto; */
 }
 
 .primary-heading {
@@ -165,6 +164,28 @@ nav {
 
 .secondary-button:hover {
   background-color: #e48f0f;
+}
+
+section {
+  width: 350px;
+  background: #11111185;
+  color: wheat;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.cart-btn {
+  background-color: #16621b;
+  padding: 0.3rem 0.8rem;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: space-around;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: wheat;
 }
 
 /* .about-section-container {
@@ -296,6 +317,7 @@ nav {
     align-items: center;
     justify-content: center;
   }
+
   .about-section-container {
     flex-direction: column;
   }
@@ -373,6 +395,7 @@ nav {
 }
 
 @media (max-width: 600px) {
+
   .home-bannerImage-container,
   .about-background-image-container {
     display: none;

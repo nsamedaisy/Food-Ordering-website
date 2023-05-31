@@ -7,12 +7,12 @@ import thaifish from '../assets/thaifish.avif';
 import rice from '../assets/rice.avif';
 
 const data = {
-  productData:[
+  productData: [
     {
       id: 1,
       img: chicken,
       title: 'Baked whole chicken with oranges and cranberries',
-      desc: '',
+      desc: ' ',
       price: 100,
     },
 

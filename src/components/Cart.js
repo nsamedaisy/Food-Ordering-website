@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from 'react-use-cart';
+import '../index.css'
 
 function Cart() {
   const {
@@ -12,40 +13,40 @@ function Cart() {
     removeItem,
     emptyCart,
   } = useCart();
-  if (isEmpty) return <h1 classname='text-center'>Your Cart is Empty</h1>
+  if (isEmpty) return <h1 classname='text-center'></h1>
   return (
-    <section>
+    <section className='cart-section'>
       <div>
+        <h5>Cart({totalUniqueItems}) total Items: ({totalItems})</h5>
         <div>
-          <h5>Cart({totalUniqueItems}) total Items: ({totalItems})</h5>
-          <table>
-            <tbody>
-              {items.map((item, index) => {
-                return (
-                  <tr key={index}>
-                    <td><img src={item.img} /></td>
-                    <td>{item.title}</td>
-                    <td>{item.price}</td>
-                    <td>Quantity({item.quantity})</td>
-                    <td>
-                      <button onClick={()=>updateItemQuantity(item.id, item.quantity -1)}>-</button>
-                      <button onClick={()=>updateItemQuantity(item.id, item.quantity +1)}>+</button>
-                      <button onClick={()=>removeItem(item.id)}>Remove Item</button>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        </div>
+          {items.map((item, index) => {
+            return (
+              <div key={index}>
+                <img src={item.img} />
+                <ul>
+                  <li>{item.title}</li>
+                  <li>$ {item.price}</li>
+                  Quantity ({item.quantity})
+                </ul>
+                <div className='cart-container'>
+                  <button className='cart-btn' onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>-</button>
 
+                  <button className='cart-btn' onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
+
+                  <button className='cart-btn' onClick={() => removeItem(item.id)}>Remove Item</button>
+                </div>
+
+              </div>
+            )
+          })}
+        </div>
         <div>
           <h2>Total Price: $ {cartTotal}</h2>
         </div>
 
-        <div>
-          <button onClick={() => emptyCart()}>Clear cart</button>
-          <button>Buy Now</button>
+        <div className='cart-container'>
+          {/* <button className='cart-btn' onClick={() => emptyCart()}>Clear cart</button> */}
+          <button className='cart-btn'  >Buy Now</button>
         </div>
       </div>
     </section>
